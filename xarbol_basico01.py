@@ -10,7 +10,6 @@ def insertaEnArbolBinario(arbol,numero):
 		insertaEnArbolBinario(arbol[1],numero)
 	else:
 		insertaEnArbolBinario(arbol[2],numero)
-
 def estaEnArbolBinario(arbol,numero):
 	if arbol==[]:
 		return False
