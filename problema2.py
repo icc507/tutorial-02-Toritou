@@ -7,5 +7,19 @@
 #         20 90 hola jiji 77
 #La salida debe ser
 #         (77, 'jiji', 'hola', 90, 20)
-t = input()
-print(t)
+def tuplas(lista):
+    nuevaLista = []
+    for elemento in lista:
+        try:
+            nuevaLista.append(int(elemento))
+        except ValueError:
+            nuevoElemento = elemento
+            nuevaLista.append(nuevoElemento)
+
+    return tuple(nuevaLista)
+
+t = input().split()
+
+t = tuplas(tuple(t))
+
+print((t[::-1]))
