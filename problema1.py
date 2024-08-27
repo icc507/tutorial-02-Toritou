@@ -1,4 +1,4 @@
-#Problema 1  / 8 ptos x4 pruebas / 32 puntos
+    #Problema 1  / 8 ptos x4 pruebas / 32 puntos
 #Concatenación de listas o tuplas
 #--------------------------------
 #Confeccione un programa que lea 2 tuplas sean t1 y t2
@@ -9,6 +9,24 @@
 #		  mundo 44
 #La salida debe ser
 #         ('mundo', 44, 20, 90, 'hola', 'mundo', 44)
-t = input()
-m = input()
-print(m)
+
+def tuplas(lista):
+    nuevaLista = []
+    for elemento in lista:
+        try:
+            nuevaLista.append(int(elemento))
+        except ValueError:
+            nuevoElemento = elemento
+            nuevaLista.append(nuevoElemento)
+
+    return tuple(nuevaLista)
+
+t = input().split()
+m = input().split()
+
+t = tuplas(t)
+m = tuplas(m)
+
+resultado = m + t + m
+
+print(resultado)
